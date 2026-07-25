@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Iconrobotics.css">
+    <title>IconRobotics | Next-Gen Automation</title>
+    <script src="Iconrobotics.js" defer></script>
+</head>
+<body>
+
+    <div class="site-container">
+        
+        <header class="navbar">
+            <div class="logo">Icon<span>Robotics</span></div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#systems">Systems</a>
+                <button class="btn btn-primary" id="openModal1">Initialize Core</button>
+            </nav>
+        </header>
+
+        <div class="layout-wrapper">
+            
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Control Panel</h3>
+                    <ul class="sidebar-links">
+                        <li><button class="sidebar-btn" id="openModal2">📊 Diagnostics</button></li>
+                        <li><button class="sidebar-btn" id="openModal3">⚙️ System Config</button></li>
+                    </ul>
+                </div>
+                <div class="sidebar-status">
+                    <div class="status-indicator online"></div>
+                    <span>Mainframe Active</span>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <section class="hero">
+                    <h1>Building the Automations of Tomorrow</h1>
+                    <p>Welcome to the IconRobotics terminal interface. Select a command module from the control panel sidebar or trigger initialization modules to view live telemetry updates.</p>
+                </section>
+
+                <section class="grid-display">
+                    <div class="card">
+                        <h3>Neural Links</h3>
+                        <p>Autonomous AI logic processing framework.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Kinematics</h3>
+                        <p>High-precision multi-axis servo mechanics.</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 IconRobotics Inc. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div class="modal-overlay" id="modal1">
+        <div class="modal-box">
+            <span class="close-btn">&times;</span>
+            <h2>Core Initialization Sequence</h2>
+            <hr>
+            <p>Warning: Initializing the primary robotics engine requires secondary authorization clearance protocols.</p>
+            <div class="modal-actions">
+                <button class="btn btn-success" onclick="alert('Systems Engaged')">Confirm Boot</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal2">
+        <div class="modal-box">
+            <span class="close-btn">&times;</span>
+            <h2>Telemetry Diagnostics</h2>
+            <hr>
+            <div class="diagnostic-log">
+                <p>[OK] Power Distribution Unit stable.</p>
+                <p>[OK] Actuator temperature standard (38°C).</p>
+                <p>[WARN] Micro-controller latency fluctuating slightly.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal3">
+        <div class="modal-box">
+            <span class="close-btn">&times;</span>
+            <h2>System Configuration</h2>
+            <hr>
+            <p>Adjust baseline parameters for mechanical operations:</p>
+            <label style="display:block; margin: 10px 0 5px;">Velocity Threshold</label>
+            <input type="range" min="1" max="100" value="75" style="width:100%;">
+            <div class="modal-actions">
+                <button class="btn btn-primary close-target">Save Config</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
