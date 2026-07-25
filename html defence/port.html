@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adeleke Eniola | Portfolio</title>
+    
+    <style>
+        .Title {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            color: #333;
+            
+        }
+        .Name, .Level, .Department, .Email, .Matric  {
+             font-family: 'Courier New', Courier, monospace;
+            margin: 5px 0;
+            font-size: 20px;
+        }
+        
+        .Level{
+            color: blue;
+        }
+        .Department{
+            color: green;
+        }
+        .Email{
+            color: red;
+        }
+        .body{
+            background-image: linear-gradient( to right,rgb(149, 149, 253),rgb(255, 100, 100));
+        }
+        .section{
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px 0;
+        }
+        .view-skills{
+            color: white;
+            background-color: green;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+        }
+        .close-skills{
+            color: white;
+            background-color: red;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+        }
+        .section-skills{
+            padding: 10px 20px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px 0;
+            background-image: linear-gradient(to right,rgb(67, 67, 255),rgb(205, 58, 246));
+            border-radius: 8px;
+            width: 50%;
+            border: black, 2px solid;
+            font-size: 20px;
+        }
+
+    </style>
+
+    
+</head>
+
+<body class="body">
+    
+    <div>
+        <h2 class="Title">My Software engineering portfolio</h2>
+        <p class="Name"> <strong>Name:</strong> Adeleke Eniola</p>
+        <p class="Matric"> <strong>Matriculation Number:</strong> VUG/SEN/25/14019</p>
+        <p class="Level"> <strong>Level:</strong> 100lvl</p>
+        <p class="Department"> <strong>Department:</strong> Software Engineering</p>
+        <p class="Email"> <strong>Email:</strong> demaffairs@gmail.com</p>
+        
+    </div>
+    <hr>
+
+    <section id="section" class="section"> 
+        <h3>About Me</h3>
+        <p>I am a passionate software engineer with experience in developing scalable web applications.</p>
+        <p>I am currently seeking an internship opportunity at flexisaf where I can apply my skills to real-world</p>
+        click the button below to view my current skills:
+        <br>
+        <button id="view-skills" class="view-skills">View Skills</button>
+    </section>
+
+    <section id="section-skills" class="section-skills" style="display: none;">
+        <h3>Skills</h3>
+        <h3>FRONT-END DEVELOPMENT</h3>
+        <ul></ul>
+            <li>HTML/CSS</li>
+            <li>React</li>
+            
+        </ul>
+        <h3>Others</h3>
+        <ul>
+            <li>Pygame</li>
+        </ul>
+        <button class="close-skills" id="close-skills">Hide Skills</button>
+    </section>
+
+    <script>
+        const skills = document.getElementById("section-skills");
+        const close = document.getElementById("close-skills");
+        const viewSkillsButton = document.getElementById("view-skills");
+
+        viewSkillsButton.addEventListener('click', () => {
+            skills.style.display = "block";
+        });
+
+        close.addEventListener('click',()=>{
+            skills.style.display = "none";
+        })
+    </script>
+</body>
+</html>

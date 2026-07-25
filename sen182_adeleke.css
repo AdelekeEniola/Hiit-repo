@@ -1,0 +1,28 @@
+/* Element Selector */
+h1 {
+  color: rgb(255, 0, 212); /* RGB Color */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Class Selector */
+.container {
+  margin: 20px;
+  padding: 25px;
+  width: 50%;
+  border: 1px solid #ccc;
+}
+
+/* ID Selector */
+#name {
+  color: blue;
+}
+
+/* Descendant Selector */
+.container p {
+  color: gray;
+  font-size: 16px;
+}
+desc {
+    font-size: 14px;
+    color: green;
+}

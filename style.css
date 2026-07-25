@@ -1,0 +1,233 @@
+body{
+background-color: #FAFAF8;
+}
+
+.navbar{
+display :flex;
+justify-content: space-between;
+margin: 0px 114px;
+/* margin-left: 114px; */
+align-items: center;
+background-color: #FFFFFF;
+}
+
+
+.menu-items{
+display:flex;
+gap:20px;
+list-style-type:none;
+padding: 0px 20px;
+}
+
+.brandName{
+font-size:24px;
+line-height: 36px;
+letter-spacing: -0.24px;
+color:#1A1A1A;
+font-weight: bold;
+}
+.buttonDiv{
+display: flex;
+gap:20px
+}
+.buttonDiv button {
+background-color: #FF5733;
+border-radius: 6px;
+width: 108.47;
+height: 44;
+color:#FFFF;
+opacity: 100%;
+border: 1px solid;
+border-color: #FF5733;
+
+}
+.buttonDiv a{
+color:black;
+text-decoration: none;
+
+}
+
+
+
+/* Hero Section Styling */
+.heroSection{
+display:flex;
+margin:0px 28px;
+padding-left:32px
+}
+
+.leftSection h2{
+font-weight: bold;
+font-size: 56px;
+line-height: 64.4px;
+letter-spacing: -1.12px;
+color:#1A1A1A;
+margin-bottom:24px;
+
+
+}
+
+.leftSection p{
+font-weight: 600px;
+font-size:18px;
+line-height: 31.5px;
+color:#4A4A4A;
+
+}
+
+/* Styling the buttons in the Hero Section */
+.button-div{
+display: flex;
+gap:16px;
+align-items: center;
+}
+
+.button-div button{
+background-color:#FF5733;
+color:white;
+border: none;
+width: 153px;
+height: 52px;
+gap:8px;
+padding:14px 32px;
+border-radius: 6px;
+
+}
+.button-div a{
+color:#1A1A1A;
+font-weight:700px;
+line-height: 24px;
+
+}
+
+.button-div svg{
+width: 18px;
+height: 18px;
+}
+
+.img-section{
+padding-top: 90px;
+margin-left: 80px;
+}
+
+
+/* Solution Section Styling */
+.solution-section{
+display:flex;
+flex-direction: column;
+}
+
+.section-header{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-self: center;
+}
+
+.card-subsection{
+display: grid;
+grid-template-columns: repeat(3, auto);
+}
+
+.card1, .card2, .card3{
+background-color: #FFFFFF;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 32px;
+margin: 10px;
+border-radius: 12px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin-left: 670.47px;
+}
+.Sep{
+    margin-left: 670.47px;
+}
+.next{
+   display: flex;
+   align-items: center;
+   margin-left: 670.47px;
+
+}
+
+
+.steps{
+    display: flex;
+   align-items: center;
+   height: 27px;
+   width: 2424px;
+   margin-left: 560px;
+   color: grey;
+}
+.Cardclass{
+    display: flex;
+    -ms-flex-item-align: repeat(3,auto);
+    align-items: center;
+    margin:10px 10px;
+}
+.hlinediv{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0px 20px;
+    height: 158px;
+    width: 2652px;
+    background-color: rgb(221, 219, 219);
+    color: #4A4A4A;
+}
+.sn{
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    
+}
+
+.number-div{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+.Number,.Number2,.Number3{
+background-color: #FF5733;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+padding-left: 2px;
+margin: 10px;
+border-radius: 12px;
+color: #FAFAF8;
+width: 64px;
+height: 64px;
+    
+}
+.blackb{
+background-color: #000000;
+color: #FAFAF8;
+background-size: 200px 50px;
+margin-top: 60px;
+
+
+}
+.blackb button{
+    background-color: #FF5733;
+    color: #FAFAF8;
+    padding: 15px 15px;
+    border-radius: 8px;
+    margin-left: 730px;
+}
+.blackb h1{
+    margin-left: 450px;
+}
+.blackb p{
+    margin-left: 500px;
+}
+.blackb h6{
+    color: #a0a0a0;
+    margin-left: 650px;
+}

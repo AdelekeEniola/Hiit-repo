@@ -1,0 +1,114 @@
+body{
+    background-color: #020618;
+    margin: 50px 213.5px;
+    color: #fff
+}
+
+/* Header */
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.header p{
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 36px;
+    margin-bottom: 8px;
+}
+
+.header button{
+    background-color: #4F39F6;
+    color: #fff;
+    width: 137.8px;
+    height: 48px;
+    border-radius: 10px;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    border: 1px solid #4F39F6;
+    cursor: pointer;
+}
+
+.header button:hover{
+    opacity: 1;
+    background-color: #2209e6;
+}
+
+/* Card */
+
+.css-concepts-card{
+background-color: #0F172B;
+max-width: 896px;
+max-height: 254px;
+padding: 20px 20px;
+border-radius: 10px;
+}
+
+/* Modal */
+
+.modal-form{
+    background-color: #1D293D;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 400px;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* Inputs */
+
+.modal-form input,
+.modal-form textarea{
+    background-color: #0F172B;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #0F172B;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    color: white;
+}
+
+/* Buttons */
+
+.button-div{
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hidden Utility Class */
+
+.hidden{
+    display: none !important;
+}
+.cancel-btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: blue;
+}
+.create-btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: blue;
+
+}
+.side{
+    display: flex;
+    width: 250px;
+    background-color: #6155b7;
+    padding: 20px;
+    min-height: 100vh;
+}
