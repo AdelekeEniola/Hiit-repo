@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+        .navbar{
+       display: flex;
+       gap: 10px;
+       justify-content: space-between;
+       align-items: center;
+       flex-direction: row;
+       padding: 10px;
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        .title{
+          font-weight: 200;
+          font-size: 23px;
+
+        }
+        .btn{
+            background-color: black;
+            padding: 10px 25px;
+            color: white;
+            border-radius: 8px;
+        }
+       
+        .img-section{
+            height: 70vh;
+            width: 100%;
+            background: linear-gradient(to right, rgba(255, 241, 207, 0.7),rgba(97, 81, 54, 0.7)),url("image/decor.webp");
+        }
+        .btn2{
+             background-color: black;
+            padding: 10px 25px;
+            color: white;
+            border-radius: 8px;
+        }
+        .word{
+            display: flex;
+           padding-top: 120px;
+           padding-left: 50px;
+           flex-direction: column;
+           gap: 30px;
+           
+        }
+        .word button{
+           
+            width: 120px;
+            height: 55px;
+        }
+        .word h1{
+            font-size: 54px;
+        }
+        .word p{
+            font-size: 19px;
+        }
+        .card-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            
+        }
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(200, 200, 200);
+            padding: 50px 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="title"><strong>BrandName</strong></div>
+        <ul class="ul">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Portfolio</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+        <button class="btn">Get Started</button>
+    </nav>
+    <section class="img-section">
+        <div class="word">
+       <h1>Designing Spaces <br>
+           That Inspire
+       </h1>
+       <p>We create beautiful functional spaces that <br> reflect your style and evaluate everyday living</p>
+       <button class="btn2">Discover More</button>
+       </div>
+    </section>
+    <div class="card-container">
+        
+        <div class="card">
+          
+            <div class="card-content">
+                <h3>Interior Design</h3>
+                <p>Thoughtful Interior designs <br> that blend aesthetics with <br> functionality</p>
+            </div>
+        </div>
+
+       
+        <div class="card">
+           
+            <div class="card-content">
+                <h3>Architecture</h3>
+                <p>Innovative Architecture <br> solutions tailored to <br> your needs</p>
+            </div>
+        </div>
+
+       
+        <div class="card">
+           
+            <div class="card-content">
+                <h3>Space Planning</h3>
+                <p>Smart layouts that <br> maximise space and <br> enhance living.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
