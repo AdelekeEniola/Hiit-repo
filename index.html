@@ -3,138 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Life track - Health Monitoring</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: 0;
-        }
-        .navbar{
-       display: flex;
-       gap: 10px;
-       justify-content: space-between;
-       align-items: center;
-       flex-direction: row;
-       padding: 10px;
-        }
-        ul{
-            list-style-type: none;
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0d7f3 0%, #f7d6e0 100%);
+            min-height: 100vh;
             display: flex;
-            flex-direction: row;
-            gap: 30px;
-        }
-        .title{
-          font-weight: 200;
-          font-size: 23px;
-
-        }
-        .btn{
-            background-color: black;
-            padding: 10px 25px;
-            color: white;
-            border-radius: 8px;
-        }
-       
-        .img-section{
-            height: 70vh;
-            width: 100%;
-            background: linear-gradient(to right, rgba(255, 241, 207, 0.7),rgba(97, 81, 54, 0.7)),url("image/decor.webp");
-        }
-        .btn2{
-             background-color: black;
-            padding: 10px 25px;
-            color: white;
-            border-radius: 8px;
-        }
-        .word{
-            display: flex;
-           padding-top: 120px;
-           padding-left: 50px;
-           flex-direction: column;
-           gap: 30px;
-           
-        }
-        .word button{
-           
-            width: 120px;
-            height: 55px;
-        }
-        .word h1{
-            font-size: 54px;
-        }
-        .word p{
-            font-size: 19px;
-        }
-        .card-container{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 30px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            
-        }
-        .card{
-            display: flex;
-            justify-content: center;
             align-items: center;
-            background-color: rgb(200, 200, 200);
-            padding: 50px 10px;
-            
+            justify-content: center;
+            padding: 2rem 0;
+            color: #1a1a1a;
+        }
+
+        /* Main Container Card */
+        .app-card {
+            background-color: #f3eeeb;
+            border-radius: 24px;
+            padding: 2.5rem 3rem;
+            width: 100%;
+            max-width: 1100px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Navbar Styling */
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            border: 3px solid #6c5ce7;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+        }
+
+        .logo-icon::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: #6c5ce7;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin: 0 10px;
+        }
+
+        .btn-try {
+            background-color: #cfc5eb;
+            color: #1a1a1a;
+            border-radius: 50px;
+            padding: 8px 24px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-try:hover {
+            background-color: #beafd8;
+            color: #000;
+        }
+
+        /* Hero Heading */
+        .hero-title {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .underline-decor {
+            display: inline-block;
+            position: relative;
+        }
+
+        .underline-decor::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background-color: #a491d3;
+            border-radius: 2px;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.25rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .feature-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 0.75rem;
+        }
+
+        .icon-box {
+            width: 36px;
+            height: 36px;
+            background-color: #d8f572;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            flex-shrink: 0;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin: 0;
+        }
+
+        .feature-desc {
+            font-size: 0.825rem;
+            color: #666;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Phone Image container */
+        .phone-wrapper {
+            position: relative;
+            text-align: center;
+            margin-top: -1rem;
+        }
+
+        .phone-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 440px;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+        }
+
+        /* Responsive spacing adjustments */
+        @media (max-width: 991px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            .app-card {
+                padding: 1.5rem;
+            }
+            .phone-wrapper {
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="title"><strong>BrandName</strong></div>
-        <ul class="ul">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Portfolio</li>
-            <li>Blog</li>
-            <li>Contact</li>
-        </ul>
-        <button class="btn">Get Started</button>
-    </nav>
-    <section class="img-section">
-        <div class="word">
-       <h1>Designing Spaces <br>
-           That Inspire
-       </h1>
-       <p>We create beautiful functional spaces that <br> reflect your style and evaluate everyday living</p>
-       <button class="btn2">Discover More</button>
-       </div>
-    </section>
-    <div class="card-container">
+
+<div class="container d-flex justify-content-center">
+    <div class="app-card">
         
-        <div class="card">
-          
-            <div class="card-content">
-                <h3>Interior Design</h3>
-                <p>Thoughtful Interior designs <br> that blend aesthetics with <br> functionality</p>
+      
+        <nav class="navbar navbar-expand-md navbar-light p-0">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="#">
+                    <span class="logo-icon"></span> Life track
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2 my-2 my-md-0">
+                        <li class="nav-item"><a class="nav-link" href="#">Devices</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Mobile App</a></li>
+                    </ul>
+                </div>
+                
+                <div class="d-none d-md-block">
+                    <a href="#" class="btn btn-try">Try now</a>
+                </div>
+            </div>
+        </nav>
+
+       
+        <div class="row text-center justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="hero-title">
+                    Your best assistant<br>
+                    <span class="underline-decor">for health monitoring</span>
+                </h1>
             </div>
         </div>
 
-       
-        <div class="card">
-           
-            <div class="card-content">
-                <h3>Architecture</h3>
-                <p>Innovative Architecture <br> solutions tailored to <br> your needs</p>
+        
+        <div class="row g-4 align-items-center mt-1">
+            
+            
+            <div class="col-lg-4 d-flex flex-column gap-4 order-2 order-lg-1">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <h3 class="feature-title">Report for a doctor</h3>
+                    </div>
+                    <p class="feature-desc">
+                        Create detailed reports so that your doctor can get a complete picture of your health and provide quality recommendations
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <h3 class="feature-title">Emergency contact</h3>
+                    </div>
+                    <p class="feature-desc">
+                        If you feel unwell, just press the button to instantly contact your loved ones or the medical service
+                    </p>
+                </div>
             </div>
+
+            <!-- Center Phone Mockup Column -->
+            <div class="col-lg-4 text-center order-1 order-lg-2">
+                <div class="phone-wrapper">
+
+                    <img src="https://i.ibb.co/Ld2s1t0/phone-mockup.png" alt="App Preview" class="phone-img img-fluid">
+                </div>
+            </div>
+
+           
+            <div class="col-lg-4 d-flex flex-column gap-4 order-3 order-lg-3">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">
+                            <i class="bi bi-aspect-ratio"></i>
+                        </div>
+                        <h3 class="feature-title">Visualization of progress</h3>
+                    </div>
+                    <p class="feature-desc">
+                        View the dynamics of your indicators for any period. Graphs help you better understand your health and monitor changes
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">
+                            <i class="bi bi-plus-square"></i>
+                        </div>
+                        <h3 class="feature-title">Preservation of history</h3>
+                    </div>
+                    <p class="feature-desc">
+                        All your metrics are stored in the app so you can easily view them at any time and analyze changes over time
+                    </p>
+                </div>
+            </div>
+
         </div>
 
-       
-        <div class="card">
-           
-            <div class="card-content">
-                <h3>Space Planning</h3>
-                <p>Smart layouts that <br> maximise space and <br> enhance living.</p>
-            </div>
-        </div>
     </div>
-    
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
